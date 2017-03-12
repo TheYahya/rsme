@@ -1,0 +1,5 @@
+configs.json
+node_modules/
+*.sublime*
+ideas.js
+.env

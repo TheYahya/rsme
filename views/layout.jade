@@ -1,0 +1,32 @@
+doctype html
+html
+	head
+		include head
+	body
+		.main
+			nav.navbar.navbar-default.navbar-me
+				.container-fluid
+					.navbar-header
+						a.navbar-brand(href='/')
+							img(src='/img/logo.png', alt='resume')
+					.collapse.navbar-collapse
+						nav.navbar-nav.navbar-left
+							if user
+								a(href='/#{user.username}').btn.btn-primary.btn-sm.navbar-btn @#{user.username}
+						nav.navbar-nav.navbar-right
+							if (!user)
+								a(href='/user/sign-in').btn.btn-default.btn-default-me.btn-sm.navbar-btn LOGIN
+								span &nbsp;&nbsp;&nbsp;
+								a(href='/user/sign-up').btn.btn-success.btn-sm.navbar-btn JOIN
+							else
+								a(href='/user/logout').btn.btn-default.btn-default-me.btn-sm.navbar-btn LOGOUT
+
+			
+			.content
+				block content
+
+	script(src='/js/jquery.min.js')
+	script(src='/js/bootstrap.min.js')
+	if user
+		script(src='/js/user.js')
+

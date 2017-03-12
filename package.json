@@ -1,0 +1,26 @@
+{
+  "name": "rsme",
+  "version": "1.1.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Yahya SayadArbabi",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.14.0",
+    "express-session": "*",
+    "express-validator": "3.1.2",
+    "jade": "~1.11.0",
+    "mongoose": "*",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.0"
+  },
+  "engines": {
+    "node": "4.2.6"
+  }
+}
