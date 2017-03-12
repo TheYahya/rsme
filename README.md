@@ -3,6 +3,8 @@
 [![GitHub version](https://badge.fury.io/gh/ysarbabi%2Frsme.svg)](https://badge.fury.io/gh/ysarbabi%2Frsme)
 [![Dependency Status](https://david-dm.org/ysarbabi/rsme.svg)](https://david-dm.org/ysarbabi/rsme)
 [![devDependency Status](https://david-dm.org/ysarbabi/rsme/dev-status.svg)](https://david-dm.org/ysarbabi/rsme#info=devDependencies)
+[![Github Issues](http://githubbadges.herokuapp.com/ysarbabi/rsme/issues.svg?style=flat-square)](https://github.com/ysarbabi/rsme/issues)
+[![Pending Pull-Requests](http://githubbadges.herokuapp.com/ysarbabi/rsme/pulls.svg?style=flat-square)](https://github.com/ysarbabi/rsme/pulls)
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/ysarbabi/rsme/)
 
