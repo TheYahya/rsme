@@ -1,0 +1,101 @@
+extends ../layout
+
+block content
+	.content-wrapper.edit-resume-wrapper
+		h2 Edit Profile
+		hr
+		br
+		label
+			h3 BASIC INFO:
+		form(method='POST', action='/user/edit', role='form', id='form-edit-resume')
+			.form-group
+				label(for='email') Email 
+				span(style='color:#999')  (required)
+				input(type='email', id='email', name='email', placeholder='email', value='#{user.email}', disabled='true').form-control
+
+			.form-group
+				label(for='username') Username
+				span(style='color:#999')  (required)
+				input(type='text', id='username', name='username', placeholder='username', value='#{user.username}').form-control
+
+			.form-group
+				label(for='fullname') Full name
+				input(type='text', id='fullname', name='fullname', placeholder='full name', value='#{user.fullname || ""}').form-control
+
+			.form-group
+				label(for='age') Age
+				input(type='number', id='age', name='age', placeholder='age', value='#{user.age || ""}').form-control
+
+			.form-group
+				label(for='bio') Bio
+				textarea(type='text', id='bio', name='bio', placeholder='biography...', rows='3').form-control #{user.bio || ""}
+			hr
+			br
+			br
+			label
+				h3 CONTANCTS INFO:
+
+			.form-group
+				label Website
+				.row
+					.form-group.col-sm-6
+						label(for='websiteTitle').sub Title
+						input(type='text', id='websiteTitle', name='websiteTitle', placeholder='website title', value='#{user.website.title || ""}').form-control
+					.form-group.col-sm-6
+						label(for='websiteUrl').sub Url
+						input(type='text', id='websiteUrl', name='websiteUrl', placeholder='websiteUrl', value='#{user.website.url || ""}').form-control
+
+			.form-group
+				label Numbers 
+					.input-numbers
+						each number, i in user.numbers
+							.row
+								.form-group.col-sm-6
+									label(for='numberTitle-#{i+1}').sub Title
+									input(type='text', id='numberTitle-#{i+1}', name='numberTitle-#{i+1}', placeholder='title', value='#{number.title || ""}').form-control
+								.form-group.col-sm-6
+									label(for='numberValue-#{i+1}').sub Number
+									input(type='text', id='numberValue-#{i+1}', name='numberValue-#{i+1}', placeholder='number', value='#{number.value || ""}').form-control 
+					span(id='add-number').btn.btn-default 
+						&#43; add more numbers
+					span &nbsp;&nbsp;&nbsp; - for remove just make fields empty
+
+			.form-group
+				label Emails 
+					.input-emails
+						each email, i in user.emails
+							.row
+								.form-group.col-sm-6
+									label(for='emailTitle-#{i+1}').sub Title
+									input(type='text', id='emailTitle-#{i+1}', name='emailTitle-#{i+1}', placeholder='title', value='#{email.title || ""}').form-control
+								.form-group.col-sm-6
+									label(for='emailValue-#{i+1}').sub Email
+									input(type='text', id='emailValue-#{i+1}', name='emailValue-#{i+1}', placeholder='email', value='#{email.value || ""}').form-control 
+					span(id='add-email').btn.btn-default 
+						&#43; add more emails
+					span &nbsp;&nbsp;&nbsp; - for remove just make fields empty
+			hr
+			br
+			br
+			label
+				h3 SKILLS:
+				.form-group 
+						.input-skills
+							each skill, i in user.skills
+								.row
+									.form-group.col-sm-6
+										label(for='skillTitle-#{i+1}').sub Title
+										input(type='text', id='skillTitle-#{i+1}', name='skillTitle-#{i+1}', placeholder='title', value='#{skill.title || ""}').form-control
+									.form-group.col-sm-6
+										label(for='skillLevel-#{i+1}').sub Level
+										span(style='color:#999')  (1 ... 10)
+										input(type='number', id='skillLevel-#{i+1}', name='skillLevel-#{i+1}', placeholder='level', value='#{skill.level || ""}').form-control 
+						span(id='add-skill').btn.btn-default 
+							&#43; add more skills
+						span &nbsp;&nbsp;&nbsp; - for remove just make fields empty  
+			input.btn.btn-success(type='submit', value='Submit', id='submit')
+			span(id='submiting-message')
+	script.
+		var countNumbers = #{user.numbers.length};
+		var countEmails = #{user.emails.length};
+		var countSkills = #{user.skills.length};

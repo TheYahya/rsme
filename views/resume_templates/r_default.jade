@@ -1,0 +1,42 @@
+doctype html
+html
+	head
+		include head
+		link(rel='stylesheet', href='/css/resume/default.min.css')
+ 
+	body
+		.main
+			.content
+				.content-wrapper
+					h1.tac.fullname= user.fullname
+					p.tac.bio= user.bio
+					hr
+					.row
+						.col-sm-6.col-left.col-left-main 
+							h3 Contanct 
+							.row 
+								.col-sm-6
+									span.title Website
+								.col-sm-6
+									a(href='#{user.website.url}')= user.website.title
+							each number, i in user.numbers
+								.row 
+									.col-sm-6
+										span.title= number.title
+									.col-sm-6
+										span= number.value
+							each email, i in user.emails
+								.row 
+									.col-sm-6
+										span.title= email.title
+									.col-sm-6
+										span= email.value 
+						.col-sm-6.col-right.col-right-main 
+							h3 Skills
+							each skill, i in user.skills
+								.row 
+									.col-sm-6
+										span.title= skill.title
+									.col-sm-6
+										span.skill
+											span.skillFull(style='width:#{skill.level*10}%')

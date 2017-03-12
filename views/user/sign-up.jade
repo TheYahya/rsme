@@ -1,0 +1,21 @@
+extends ../layout-free
+
+block body
+	body(style='background-image: url(/img/sign-up.jpg);').s-body
+		.sign-up
+			p.tac
+				a(href='/')
+					img(src='/img/logo.png', style='width:12em;') 
+			if errors 
+				each error, i in errors
+					.alert.alert-danger #{error.msg}
+			form(action='/user/sign-up', method='POST', role='form')
+				.form-group 
+					input(type='email', id='email', name='email', placeholder='email', value='#{email||""}' autofocus).form-control
+				.form-group 
+					input(type='password', id='password', name='password', placeholder='password').form-control 
+				.form-group
+					input(type='submit', value='Sign up').btn.btn-primary.form-control
+			br 
+			p.tac.offer
+				a(href='/user/sign-in') Already have an account? Sign in.
