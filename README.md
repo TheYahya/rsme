@@ -12,31 +12,26 @@ Simple resume builder. [Project demo](https://rsme.herokuapp.com/) and [Sample r
 ## Installation
 
 Clone the app:
-
 ```bash
 $ git clone git@github.com:ysarbabi/rsme.git
 ```
 
 Change current directory to the app directory:
-
 ```bash
 $ cd rsme
 ```
 
 Install dependencies:
-
 ```bash
 $ npm install
 ```
 
-Set MONGODB_URL variable:
-
+Set `MONGODB_URL` variable:
 ```bash
-$ export=MONGODB_URL="mongodb://username:password@host:port/database" # Replace your mongodb url.
+$ export MONGODB_URL="mongodb://username:password@host:port/database" # Replace your mongodb url.
 ```
 
 Start rsme app at `http://localhost:3000/`:
-
 ```bash
 $ npm start
 ```
