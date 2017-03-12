@@ -3,3 +3,4 @@ node_modules/
 *.sublime*
 ideas.js
 .env
+npm-debug.log
