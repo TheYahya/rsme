@@ -3,12 +3,11 @@ Simple resume builder. [Project demo](https://rsme.herokuapp.com/) and [Sample r
 
 
 ## Installation
-- <kbd>git clone git@github.com:ysarbabi/rsme.git</kbd>
-- <kbd>cd rsme</kbd>
-- <kbd>npm install</kbd>
-
-- <kbd>export=MONGODB_URL="mongodb://username:password@host:port/database"</kbd> `#Add your mongodb url`
-- <kbd>npm start</kdb>
+- `git clone git@github.com:ysarbabi/rsme.git`
+- `cd rsme`
+- `npm install`
+- `export=MONGODB_URL="mongodb://username:password@host:port/database"` # Replace your mongodb url.
+- `npm start`
 
 ## License
 This software is released under the [MIT License](https://github.com/ysarbabi/rsme/blob/master/LICENSE).
