@@ -40,4 +40,4 @@ $ npm start
 ```
 
 ## License
-This software is released under the [MIT License](https://github.com/ysarbabi/rsme/blob/master/LICENSE).
+This software is released under the [MIT License](https://ysarbabi.mit-license.org).
