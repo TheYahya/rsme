@@ -16,7 +16,7 @@ Simple resume builder. [Project demo](https://rsme.herokuapp.com/) and [Sample r
 
 Clone the app:
 ```bash
-$ git clone git@github.com:ysarbabi/rsme.git
+$ git clone git@github.com:theyahya/rsme.git
 ```
 
 Change current directory to the app directory:
